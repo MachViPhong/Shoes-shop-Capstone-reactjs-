@@ -1,21 +1,22 @@
 import { Carousel } from "antd";
 import React from "react";
 import carouselImage1 from "../../assets/img/backgroundCarousel.jpg";
-import carouselImage2 from "../../assets/img/images (4).jfif";
-import carouselImage3 from "../../assets/img/images (9).jfif";
+import carouselImage2 from "../../assets/img/jordan-blue.jpg";
+import carouselImage3 from "../../assets/img/jordan-purple.jpg";
 import ProductList from "../../components/ProductList/ProductList";
 import "../../assets/css/index.css";
 
 const Index = () => {
   return (
     <>
-      <Carousel autoplay className="container ">
-        <div className="row ">
+      <Carousel autoplay className="container">
+        <div className="row p-2">
           <div className="image col-7">
             <img
               src={carouselImage1}
               alt="..."
               style={{ objectFit: "cover", height: 500, width: "100%" }}
+              className="image-carousel"
             />
           </div>
           <div
@@ -26,22 +27,19 @@ const Index = () => {
               justifyContent: "center",
             }}
           >
-            <h3 className="name">Product-name</h3>
-            <p className="description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
-              impedit provident illum, omnis corrupti fuga. Nulla, voluptatum
-              distinctio mollitia vitae quos facer Ullam quod quae voluptatum
-              praesentium, ratione sapiente aliquam?
+            <h3 className="name fs-1" style={{color: 'white'}}>Nike Jordan White</h3>
+            <p className="description fs-5">
+            Jordan là một phiên bản giày do Nike – thương hiệu giày đình đám trên thế giới sản xuất. Tuy nhiên, khác với các dòng giàu khác, Jordan được Nike thiết kế riêng cho vua bóng rổ Michael Jordan. Từ đó, Nike đã lấy tên của ông hoàng bóng rổ làm tên chocủa thương hiệu giày này.
             </p>
-            <button className="btn btn-success w-25">Buy now</button>
           </div>
         </div>
-        <div className="row">
+        <div className="row p-2">
           <div className="image col-7">
             <img
               src={carouselImage2}
               alt="..."
               style={{ objectFit: "cover", height: 500, width: "100%" }}
+              className="image-carousel"
             />
           </div>
           <div
@@ -52,22 +50,19 @@ const Index = () => {
               justifyContent: "center",
             }}
           >
-            <h3 className="name">Product-name</h3>
-            <p className="description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
-              impedit provident illum, omnis corrupti fuga. Nulla, voluptatum
-              distinctio mollitia vitae quos facer Ullam quod quae voluptatum
-              praesentium, ratione sapiente aliquam?
+            <h3 className="name fs-1" style={{color: '#0202c4'}}>Nike Jordan Blue</h3>
+            <p className="description fs-5">
+            Jordan là một phiên bản giày do Nike – thương hiệu giày đình đám trên thế giới sản xuất. Tuy nhiên, khác với các dòng giàu khác, Jordan được Nike thiết kế riêng cho vua bóng rổ Michael Jordan. Từ đó, Nike đã lấy tên của ông hoàng bóng rổ làm tên chocủa thương hiệu giày này.
             </p>
-            <button className="btn btn-success w-25">Buy now</button>
           </div>
         </div>
-        <div className="row">
+        <div className="row p-2" style={{margin: 0}}>
           <div className="image col-7">
             <img
               src={carouselImage3}
               alt="..."
               style={{ objectFit: "cover", height: 500, width: "100%" }}
+              className="image-carousel"
             />
           </div>
           <div
@@ -78,14 +73,10 @@ const Index = () => {
               justifyContent: "center",
             }}
           >
-            <h3 className="name">Product-name</h3>
-            <p className="description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
-              impedit provident illum, omnis corrupti fuga. Nulla, voluptatum
-              distinctio mollitia vitae quos facer Ullam quod quae voluptatum
-              praesentium, ratione sapiente aliquam?
+            <h3 className="name fs-1" style={{color: '#640095'}}>Nike Jordan Purple</h3>
+            <p className="description fs-5">
+            Jordan là một phiên bản giày do Nike – thương hiệu giày đình đám trên thế giới sản xuất. Tuy nhiên, khác với các dòng giàu khác, Jordan được Nike thiết kế riêng cho vua bóng rổ Michael Jordan. Từ đó, Nike đã lấy tên của ông hoàng bóng rổ làm tên chocủa thương hiệu giày này.
             </p>
-            <button className="btn btn-success w-25">Buy now</button>
           </div>
         </div>
       </Carousel>

@@ -15,6 +15,7 @@
       .col-12 {
         .content {
           .title {
+            color: #000000cc;
             font-size: 25px;
             font-weight: 700;
             @media screen and (max-width: 992px) {
@@ -26,19 +27,15 @@
             margin: 0;
             padding: 0;
             // padding-right: 20px;
-            border-right: 1px solid #cacaca;
+            border-right: 1px solid #000000cc;
             &.special {
               border: none;
             }
             li {
+              color: #000000cc;
               list-style: none;
               @media screen and (max-width: 992px) {
                 font-size: 14px;
-              }
-              a {
-                text-decoration: none;
-                color: #da8b87;
-                font-weight: 500;
               }
             }
           }

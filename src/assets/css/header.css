@@ -1,9 +1,9 @@
 .choice.nav-link {
-    color: rgb(0 0 0 / 70%);
+    color: rgb(255, 71, 71);
 }
 
 .not-choice.nav-link {
-    color: rgb(0 0 0 / 30%);
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .nav-link {
@@ -14,14 +14,13 @@
   transition: all 0.6s;
 }
 .nav-link:hover{
-    color: brown;
-    font-size: 33px;
+    color: rgb(255, 71, 71);
 }
 
 .category{
-    color: rgb(0 0 0 / 50%);
+    color: rgba(255, 255, 255, 0.75);
     transition: all 0.6s;
 }
 .category:hover{
-    color: brown;
+    color: rgb(255, 71, 71);
 }

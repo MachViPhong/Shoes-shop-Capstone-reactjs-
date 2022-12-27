@@ -11,7 +11,7 @@ const Header = () => {
         justifyContent: "space-between",
         alignItems: "center",
         // backgroundColor: 'rgb(0 0 0 / 50%)', 
-        background: 'rgb(0 0 0 / 20%)',
+        background: 'rgb(0 0 0 / 80%)',
         border: '3px solid rgb(0 0 0 / 50%)'
       }}
     >

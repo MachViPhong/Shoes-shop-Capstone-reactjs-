@@ -1,12 +1,39 @@
-.card{
-    background: #eee;
-    box-shadow: 0 8px 8px -4px lightblue;
+.card {
+  background: rgb(135, 135, 135);
+  background: linear-gradient(
+    135deg,
+    rgb(135, 135, 135) 0%,
+    rgba(201, 201, 201, 1) 50%,
+    rgba(135, 135, 135, 1) 100%
+  );
+  box-shadow: 0 8px 8px -4px black;
 }
 
-.card-image{
-    scale: 0.7;
-    transition: all 0.6s;
+.card-image {
+  scale: 0.7;
+  transition: all 0.6s;
 }
-.image .card-image:hover{
-    scale: 0.8;
+.image .card-image:hover {
+  scale: 0.8;
+}
+
+.btn-success {
+  background: rgb(0, 182, 39);
+  background: linear-gradient(
+    153deg,
+    rgba(0, 182, 39, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(0, 182, 39, 1) 100%
+  );
+  font-weight: 800;
+}
+
+.price {
+  background: rgb(218, 209, 0);
+  background: linear-gradient(
+    153deg,
+    rgba(218, 209, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(218, 209, 0, 1) 100%
+  );
 }

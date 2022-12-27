@@ -6,3 +6,12 @@
 .row{
     display: flex !important;
 }
+
+.image-carousel{
+    border-radius: 30px;
+    box-shadow: 0 8px 8px -4px black;
+}
+
+.slick-dots{
+    opacity: 0 !important;
+}

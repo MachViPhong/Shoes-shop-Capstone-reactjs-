@@ -20,10 +20,9 @@ const Search = () => {
     <>
       <div className="container-fluid" style={{ padding: 0, margin: 0 }}>
         <div className="background">
-          {/* <img src={backgroundCarousel} alt="..." style={{objectFit: 'cover', width: '100%', filter: grayscale(.5)}} /> */}
           <h2 className="text-white text-center title-carousel">Searching</h2>
         </div>
-        <div className="row  container mt-4">
+        <div className="row container mt-4">
           <Space direction="vertical" style={{marginLeft: 100}}>
             <Search
               placeholder="input search text"
@@ -41,11 +40,11 @@ const Search = () => {
       </div>
 
       <div className="container mt-4">
-        <h2 className="title text-center">Related Products</h2>
+        <h1 className="title text-center">Related Products</h1>
         <div className="filter">
             <Select
               defaultValue="NIKE"
-              style={{ width: 120 }}
+              style={{ width: 120 , fontSize: 50}}
               allowClear
               options={[
                 {
