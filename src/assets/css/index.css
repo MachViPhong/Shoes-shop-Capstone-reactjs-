@@ -1,0 +1,8 @@
+*{
+    font-family: 'Balsamiq Sans', cursive;
+    box-sizing: border-box;
+}
+
+.row{
+    display: flex !important;
+}

@@ -1,0 +1,22 @@
+.background{
+    background: linear-gradient(#212245b2, #212245b2), url('../img/img/sneakers-skateboard-wallpaper-preview.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.title-carousel{
+   font-size:   50px;
+}
+
+.filter{
+    display: flex;
+    justify-content: end;
+    margin-right: 12px;
+}
