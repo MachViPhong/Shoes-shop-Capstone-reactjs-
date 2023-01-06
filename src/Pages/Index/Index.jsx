@@ -9,7 +9,7 @@ import "../../assets/css/index.css";
 const Index = () => {
   return (
     <>
-      <Carousel autoplay className="container">
+      <Carousel autoplay className="container pt-5">
         <div className="row p-2">
           <div className="image col-7">
             <img
@@ -27,7 +27,7 @@ const Index = () => {
               justifyContent: "center",
             }}
           >
-            <h3 className="name fs-1" style={{color: 'white'}}>Nike Jordan White</h3>
+            <h3 className="name" style={{fontWeight: 600, fontSize: 45, color: 'white'}}>Nike Jordan White</h3>
             <p className="description fs-5">
             Jordan là một phiên bản giày do Nike – thương hiệu giày đình đám trên thế giới sản xuất. Tuy nhiên, khác với các dòng giàu khác, Jordan được Nike thiết kế riêng cho vua bóng rổ Michael Jordan. Từ đó, Nike đã lấy tên của ông hoàng bóng rổ làm tên chocủa thương hiệu giày này.
             </p>
@@ -50,7 +50,7 @@ const Index = () => {
               justifyContent: "center",
             }}
           >
-            <h3 className="name fs-1" style={{color: '#0202c4'}}>Nike Jordan Blue</h3>
+            <h3 className="name" style={{fontWeight: 600, fontSize: 45, color: '#0000c2'}}>Nike Jordan Blue</h3>
             <p className="description fs-5">
             Jordan là một phiên bản giày do Nike – thương hiệu giày đình đám trên thế giới sản xuất. Tuy nhiên, khác với các dòng giàu khác, Jordan được Nike thiết kế riêng cho vua bóng rổ Michael Jordan. Từ đó, Nike đã lấy tên của ông hoàng bóng rổ làm tên chocủa thương hiệu giày này.
             </p>
@@ -73,7 +73,7 @@ const Index = () => {
               justifyContent: "center",
             }}
           >
-            <h3 className="name fs-1" style={{color: '#640095'}}>Nike Jordan Purple</h3>
+            <h3 className="name" style={{fontWeight: 600, fontSize: 45, color: '#640095'}}>Nike Jordan Purple</h3>
             <p className="description fs-5">
             Jordan là một phiên bản giày do Nike – thương hiệu giày đình đám trên thế giới sản xuất. Tuy nhiên, khác với các dòng giàu khác, Jordan được Nike thiết kế riêng cho vua bóng rổ Michael Jordan. Từ đó, Nike đã lấy tên của ông hoàng bóng rổ làm tên chocủa thương hiệu giày này.
             </p>
@@ -82,7 +82,7 @@ const Index = () => {
       </Carousel>
 
       <div className="container mt-5">
-        <h2 className="title text-center">Product Feature</h2>
+        <h2 className="title text-center pt-5" style={{fontSize: 50}}>Product Feature</h2>
         <ProductList />
       </div>
     </>

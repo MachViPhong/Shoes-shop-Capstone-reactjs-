@@ -1,0 +1,12 @@
+.background-cart {
+    background: linear-gradient(#363872b2, #363872b2),
+      url("../img/img/person-wearing-white-red-and-black-nike-x-off-white-air-jordan-1-s.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

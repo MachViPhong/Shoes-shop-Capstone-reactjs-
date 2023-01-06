@@ -19,7 +19,7 @@ const Search = () => {
   return (
     <>
       <div className="container-fluid" style={{ padding: 0, margin: 0 }}>
-        <div className="background">
+        <div className="background-search">
           <h2 className="text-white text-center title-carousel">Searching</h2>
         </div>
         <div className="row container mt-4">

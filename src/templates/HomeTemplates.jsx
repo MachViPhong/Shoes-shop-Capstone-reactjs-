@@ -19,7 +19,7 @@ const HomeTemplates = () => {
       <section className="contact-us">
         <ContactUs />
       </section>
-      <footer className="footer p-3 text-center">
+      <footer className="footer p-3 text-center fs-4">
         © 2022 Cybersoft All Rights Reserved | Design Theme by Trương Tấn Khải.
       </footer>
     </div>

@@ -12,7 +12,7 @@ const Header = () => {
         alignItems: "center",
         // backgroundColor: 'rgb(0 0 0 / 50%)', 
         background: 'rgb(0 0 0 / 80%)',
-        border: '3px solid rgb(0 0 0 / 50%)'
+        // border: '3px solid rgb(0 0 0 / 50%)'
       }}
     >
       <NavLink to='/' className="align-left">

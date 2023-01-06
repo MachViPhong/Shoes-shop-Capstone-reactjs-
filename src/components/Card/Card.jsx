@@ -15,19 +15,19 @@ const Card = ({prod}) => {
           />
         </NavLink>
         <div className="card-body">
-          <h4 className="name text-center" style={{color: '#000000ab', fontWeight: '600', fontSize: 25}}>{prod.name}</h4>
+          <h4 className="name text-center" style={{color: '#000000ab', fontSize: 27, fontWeight: '600'}}>{prod.name}</h4>
           <div className="row w-100" style={{margin: 0}}>
             <div
-              className="col-6 text-center"
-              style={{ overflow: "hidden", padding: 0 }}
+              className="col-4"
+              style={{ overflow: "hidden", padding: 0, display: 'flex' , alignItems: 'center', justifyContent: 'center', padding: 0 }}
             >
-              <button className="btn btn-success text-success w-75 fs-5">Buy now</button>
+              <span className="price h-100 fs-1" style={{display: 'flex' , alignItems: 'center', justifyContent: 'center', color: '#DA0037', fontWeight: '800'}}>${prod.price}</span>
             </div>
             <div
-              className="col-6 text-center"
-              style={{ overflow: "hidden", padding: 0, display: 'flex' , alignItems: 'center', justifyContent: 'center' }}
+              className="col-12 text-center"
+              style={{ overflow: "hidden", padding: 0 }}
             >
-              <span className="price w-75 border border-secondary h-100 rounded fs-5" style={{display: 'flex' , alignItems: 'center', justifyContent: 'center', color: '#7d6d01', fontWeight: '800'}}>${prod.price}</span>
+              <button className="btn add-to-cart w-100 fs-2">Add to cart</button>
             </div>
           </div>
         </div>

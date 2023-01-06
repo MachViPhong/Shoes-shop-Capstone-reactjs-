@@ -17,23 +17,13 @@
   scale: 0.8;
 }
 
-.btn-success {
-  background: rgb(0, 182, 39);
+.add-to-cart {
+  background: rgb(0, 121, 157);
   background: linear-gradient(
-    153deg,
-    rgba(0, 182, 39, 1) 0%,
+    360deg,
+    rgba(0, 121, 157, 1) 0%,
     rgba(255, 255, 255, 1) 50%,
-    rgba(0, 182, 39, 1) 100%
+    rgba(0, 121, 157, 1) 100%
   );
   font-weight: 800;
-}
-
-.price {
-  background: rgb(218, 209, 0);
-  background: linear-gradient(
-    153deg,
-    rgba(218, 209, 0, 1) 0%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(218, 209, 0, 1) 100%
-  );
 }
