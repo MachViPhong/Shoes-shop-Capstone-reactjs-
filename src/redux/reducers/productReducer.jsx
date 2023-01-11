@@ -31,7 +31,6 @@ const productReducer = createSlice({
         let number = newCart[indexShoe].number + 1;
         newCart[indexShoe] = {...newCart[indexShoe], number};
         state.cartList = [...  newCart];
-
       } else {
         state.cartList = [...state.cartList, newShoeClick];
       }
