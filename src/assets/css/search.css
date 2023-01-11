@@ -25,3 +25,11 @@
   justify-content: end;
   margin-right: 12px;
 }
+
+.ctn-search .MuiButtonBase-root{
+  color: white !important;
+}
+
+.ctn-search .MuiButtonBase-root.Mui-selected{
+  color: #9c27b0 !important;
+}

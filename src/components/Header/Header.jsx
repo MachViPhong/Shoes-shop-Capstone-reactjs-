@@ -8,17 +8,17 @@ const Header = () => {
       className="container-fluid text-white px-5"
       style={{
         display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
+        // justifyContent: "space-between",
+        // alignItems: "center",
         // backgroundColor: 'rgb(0 0 0 / 50%)', 
         background: 'rgb(0 0 0 / 80%)',
         // border: '3px solid rgb(0 0 0 / 50%)'
       }}
     >
-      <NavLink to='/' className="align-left">
+      <NavLink to='/' className="align-left w-25">
         <img src={logo} alt="logo" style={{ width: 100, height: 100,  }} />
       </NavLink>
-      <div className="text-white p-2 nav">
+      <div className="text-white p-2 nav w-50" style={{display: 'dflex', justifyContent: 'center' ,alignItems: 'center'}}>
         <NavLink
           className={({ isActive }) =>
             isActive ? "choice nav-link mx-2" : "not-choice nav-link mx-2"
@@ -46,7 +46,7 @@ const Header = () => {
           Search
         </NavLink>
       </div>
-      <div className="component-header" style={{display: 'flex',justifyContent: 'space-around', alignItems: 'center'}}>
+      <div className="component-header w-25" style={{display: 'flex',justifyContent: 'end', alignItems: 'center'}}>
         <div className="component-search">
             <NavLink className='category' to='/carts' style={{textDecoration: 'none'}}><i class="fa fa-shopping-cart mx-2"></i>
             <span className="span-cart">0</span>
@@ -55,9 +55,9 @@ const Header = () => {
         <div className="component-login mx-2">
             <NavLink className='category' to='/login' style={{textDecoration: 'none'}}><i class="fa fa-user-circle mx-2"></i>Login</NavLink>    
         </div>
-        <div className="component-search mx-2">
+        {/* <div className="component-search mx-2">
             <NavLink className='category' to='/register' style={{textDecoration: 'none'}}><i class="fa fa-address-book mx-2"></i>Register</NavLink>    
-        </div>
+        </div> */}
       </div>
     </div>
   );

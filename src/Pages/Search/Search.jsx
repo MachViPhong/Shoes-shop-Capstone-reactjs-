@@ -1,8 +1,12 @@
 import { Input, Select, Space } from "antd";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AudioOutlined } from "@ant-design/icons";
 import "../../assets/css/search.css";
 import ProductList from "../../components/ProductList/ProductList";
+import { TabContext, TabList } from "@mui/lab";
+import { Box, Tab } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { getProductCategoriesAction } from "../../redux/reducers/productReducer";
 
 const Search = () => {
   const { Search } = Input;
@@ -15,6 +19,16 @@ const Search = () => {
       }}
     />
   );
+  const { categories } = useSelector((state) => state.productReducer);
+  const dispatch = useDispatch();
+  const [categoriesComponent, setCategoriesComponent] = useState(categories);
+  const handleChange = (event, newValue) => {
+    setCategoriesComponent(newValue);
+  };
+  
+  useEffect(() => {
+    dispatch(getProductCategoriesAction(categoriesComponent));
+  }, [categoriesComponent]);
   const onSearch = (value) => console.log(value);
   return (
     <>
@@ -39,29 +53,26 @@ const Search = () => {
         </div>
       </div>
 
-      <div className="container mt-4">
+      <div className="container ctn-search mt-4">
         <h1 className="title text-center">Related Products</h1>
-        <div className="filter">
-            <Select
-              defaultValue="NIKE"
-              style={{ width: 120 , fontSize: 50}}
-              allowClear
-              options={[
-                {
-                  value: "NIKE",
-                  label: "NIKE",
-                },
-                {
-                  value: "ADIDAS",
-                  label: "ADIDAS",
-                },
-                {
-                  value: "VANS",
-                  label: "VANS",
-                },
-              ]}
-            />
-          </div>
+          <TabContext value={categories}>
+            <Box sx={{bgcolor: 'text.primary'}}>
+              <TabList
+                onChange={handleChange}
+                aria-label="lab API tabs example"
+                textColor="secondary"
+                indicatorColor="secondary"
+                centered
+              >
+                <Tab label="All" value="All" />
+                <Tab label="Nike" value="Nike" />
+                <Tab label="Adidas" value="Adidas" />
+                <Tab label="Vans" value="Vans" />
+                <Tab label="Converse" value="Converse" />
+                <Tab label="Others" value="Others" />
+              </TabList>
+            </Box>
+          </TabContext>
           <ProductList />
       </div>
     </>

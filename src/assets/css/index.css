@@ -15,3 +15,13 @@
 .slick-dots{
     opacity: 0 !important;
 }
+.ctn-index .MuiButtonBase-root{
+    color: white !important;
+}
+.ctn-index .MuiButtonBase-root.Mui-selected{
+    color: #1976d2 !important;
+}
+
+.MuiBox-root{
+    margin: 0 12px !important;
+}

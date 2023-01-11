@@ -1,5 +1,6 @@
 .content-outlet {
-  background: rgb(101, 101, 101);
+  /* background: rgb(101, 101, 101); */
+  background: rgb(149, 149, 149);
   padding-bottom: 50px;
   /* background: radial-gradient(
     circle,
@@ -8,13 +9,6 @@
     rgba(101, 101, 101, 1) 100%
   ); */
   /* padding: 50px 0; */
-  /* border: 3px solid rgb(0 0 0 / 50%);
-  border-top: none; */
-}
-
-.footer {
-  color: rgba(255, 255, 255, 0.75);
-  background: rgba(0 0 0 / 80%);
   /* border: 3px solid rgb(0 0 0 / 50%);
   border-top: none; */
 }
