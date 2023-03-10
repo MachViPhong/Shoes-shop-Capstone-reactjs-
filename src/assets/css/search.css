@@ -31,5 +31,12 @@
 }
 
 .ctn-search .MuiButtonBase-root.Mui-selected{
-  color: #9c27b0 !important;
+  color: #da231f !important;
+}
+
+.css-dev-only-do-not-override-9ntgx0 {
+  border-color: #da231f !important;
+}
+.ant-input-search-button:hover, span.anticon.anticon-audio:hover, .fa-backspace:hover{
+  color: #da231f !important;
 }

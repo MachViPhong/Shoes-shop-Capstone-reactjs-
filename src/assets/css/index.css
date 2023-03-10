@@ -1,27 +1,30 @@
-*{
+* {
     font-family: 'Nunito Sans', sans-serif;
     box-sizing: border-box;
 }
 
-.row{
+.row {
     display: flex !important;
 }
 
-.image-carousel{
+.image-carousel {
     border-radius: 30px;
     box-shadow: 0 8px 8px -4px black;
 }
 
-.slick-dots{
+.slick-dots {
     opacity: 0 !important;
 }
-.ctn-index .MuiButtonBase-root{
+
+.ctn-index .MuiButtonBase-root {
     color: white !important;
 }
-.ctn-index .MuiButtonBase-root.Mui-selected{
-    color: #1976d2 !important;
+
+.MuiButtonBase-root.Mui-selected, .MuiTouchRipple-root.css-8je8zh-MuiTouchRipple-root {
+    color: #da231f !important;
 }
 
-.MuiBox-root{
+
+.MuiBox-root {
     margin: 0 12px !important;
 }

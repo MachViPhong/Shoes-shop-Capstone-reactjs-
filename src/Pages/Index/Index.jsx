@@ -45,7 +45,7 @@ const Index = () => {
           >
             <h3
               className="name"
-              style={{ fontWeight: 600, fontSize: 45, color: "white" }}
+              style={{ fontWeight: 600, fontSize: 45, color: "black" }}
             >
               Nike Jordan White
             </h3>

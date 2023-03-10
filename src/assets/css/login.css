@@ -1,0 +1,22 @@
+.ant-form{
+    width: 100%;
+    align-items: center;
+    padding-top: 15px;
+}
+.ant-row{
+    justify-content: center;
+}
+.ant-col{
+    width: 100%;
+}
+.ant-form-item-control-input{
+    text-align: center;
+}
+.carousel-picture{
+    transition: all 0.6s;
+}
+
+.carousel-picture:hover{
+    scale: 1.1;
+}
+

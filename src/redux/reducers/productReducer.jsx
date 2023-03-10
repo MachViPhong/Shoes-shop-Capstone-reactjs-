@@ -1,3 +1,4 @@
+import { CFormLabel } from "@coreui/react";
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
@@ -6,6 +7,8 @@ const initialState = {
   productDetail: [],
   cartList: [],
   categories: "All",
+  totalPrice: 0,
+  count: 0,
 };
 
 const productReducer = createSlice({
@@ -29,13 +32,58 @@ const productReducer = createSlice({
       if (indexShoe !== -1) {
         console.log('shoe index: ', newCart[indexShoe])
         let number = newCart[indexShoe].number + 1;
-        newCart[indexShoe] = {...newCart[indexShoe], number};
-        state.cartList = [...  newCart];
+        newCart[indexShoe] = { ...newCart[indexShoe], number };
+        state.cartList = [...newCart];
       } else {
         state.cartList = [...state.cartList, newShoeClick];
       }
-      console.log('state.cartlist', state.cartList )
+      state.totalPrice += newShoeClick.price;
+      console.log('totalprice', state.totalPrice);
+      state.count++;
     },
+    deleteCartAction: (state, action) => {
+      let shoeClick = { ...action.payload };
+      console.log('shoeClick hello: ', shoeClick)
+
+      let newCart = [...state.cartList];
+      newCart = newCart.filter((shoe) => shoe.id !== shoeClick.id);
+      state.cartList = [...newCart];
+      console.log('state.cartlist', state.cartList);
+      state.count--;
+      console.log('count', state.count);
+      state.totalPrice -= shoeClick.price*shoeClick.number;
+      console.log('totalprice', state.totalPrice);
+    },
+    changeQuantityMinusAction: (state, action) => {
+      let newShoeClick = { ...action.payload };
+      let newCart = [...state.cartList];
+      let shoeFind = newCart.find((shoe) => shoe.id === newShoeClick.id);
+      if (shoeFind && (shoeFind.number >1)) {
+        shoeFind.number--;
+        state.totalPrice -= newShoeClick.price;
+      }
+      else {
+        alert('Can\'t reduce quantity below 0')
+      }
+      state.cartList = [...newCart];
+      console.log('state.cartlist', state.cartList);
+      console.log('totalprice', state.totalPrice);
+
+    },
+    changeQuantityPlusAction: (state, action) => {
+      let newShoeClick = { ...action.payload };
+      let newCart = [...state.cartList];
+      let shoeFind = newCart.find((shoe) => shoe.id === newShoeClick.id);
+      if (shoeFind) {
+        shoeFind.number++;
+        state.totalPrice += newShoeClick.price;
+      }
+      state.cartList = [...newCart];
+      console.log('state.cartlist', state.cartList);
+      console.log('totalprice', state.totalPrice);
+
+    },
+  
   },
 });
 
@@ -44,6 +92,9 @@ export const {
   getProductDetailAction,
   getProductCategoriesAction,
   getCartAction,
+  deleteCartAction,
+  changeQuantityMinusAction,
+  changeQuantityPlusAction,
 } = productReducer.actions;
 
 export default productReducer.reducer;

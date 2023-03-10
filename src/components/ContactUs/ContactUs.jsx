@@ -11,7 +11,8 @@ const ContactUs = () => {
             <div className="col col-12 col-sm-12 col-md-12 col-lg-8 col-xl-6">
               <div className="content">
                 <h2 className="text-white">
-                  Enough Talk, Let's Build Something Together
+                  {/* Enough Talk, Let's Build Something Together */}
+                  Run when you can, walk if you have to, crawl if you must; just never give up.
                 </h2>
               </div>
             </div>

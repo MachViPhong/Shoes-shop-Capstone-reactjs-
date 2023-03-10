@@ -1,0 +1,207 @@
+ul {
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+}
+
+.footer {
+    padding: 25px 0;
+    background-color: #010001;
+  }
+  
+  .footer .container {
+  }
+  
+  .footer .container-row1 {
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(94, 88, 82, 0.562);
+  }
+  
+  .footer .container-row1 .row .col .content h2 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  
+  .footer .container-row1 .row .col .button {
+    display: flex;
+    justify-content: end;
+  }
+  
+  .footer .container-row1 .row .col .button button {
+    color: #fff;
+    font-weight: 600;
+    padding: 26px 60px;
+    border: 2px solid rgba(94, 88, 82, 0.562);
+    border-radius: 50px;
+    letter-spacing: 2px;
+  
+    cursor: pointer;
+    transition: all 0.6s;
+  }
+  
+  .footer .container-row1 .row .col .button button:hover {
+    background-color: #fd4766;
+    border-color: #fd4766;
+  }
+  
+  .footer .container-row2 {
+    padding-top: 25px;
+  }
+  
+  .footer .container-row2 .row .col .c1 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    color: #757575;
+  }
+  .footer .container-row2 .row .col .content .logo img {
+    width: 132px;
+    height: 60px;
+  }
+  
+  .footer .container-row2 .row .col .content .text {
+    font-size: 18px;
+    word-spacing: 2px;
+    line-height: 30px;
+  }
+  
+  .footer .container-row2 .row .col .content .text a {
+    color: #757575;
+    position: relative;
+    transition: all 0.6s;
+  }
+  
+  .footer .container-row2 .row .col .content .text a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background: rgb(0, 198, 255);
+    background: linear-gradient(
+      118deg,
+      rgba(0, 198, 255, 1) 0%,
+      rgba(0, 142, 222, 1) 43%,
+      rgba(199, 1, 194, 1) 60%,
+      rgba(255, 0, 18, 1) 100%
+    );
+    transition: width 0.3s;
+  }
+  
+  .footer .container-row2 .row .col .content .text a:hover {
+    color: #fd4766;
+  }
+  
+  .footer .container-row2 .row .col .content .text a:hover::after {
+    width: 100%;
+  }
+  
+  .footer .container-row2 .row .col .content h4 {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .footer .container-row2 .row .col .content ul.ft-link {
+    padding: 0;
+    padding-top: 25px;
+  }
+  
+  .footer .container-row2 .row .col .content ul.ft-link li {
+    padding-top: 15px;
+  }
+  
+  .footer .container-row2 .row .col .content ul.ft-link li a {
+    color: #757575;
+    position: relative;
+    transition: all 0.6s;
+  }
+  
+  .footer .container-row2 .row .col .content ul.ft-link li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background: rgb(0, 198, 255);
+    background: linear-gradient(
+      118deg,
+      rgba(0, 198, 255, 1) 0%,
+      rgba(0, 142, 222, 1) 43%,
+      rgba(199, 1, 194, 1) 60%,
+      rgba(255, 0, 18, 1) 100%
+    );
+    transition: width 0.3s;
+  }
+  
+  .footer .container-row2 .row .col .content ul.ft-link li a:hover {
+    color: #fd4766;
+  }
+  
+  .footer .container-row2 .row .col .content ul.ft-link li a:hover::after {
+    width: 100%;
+  }
+  
+  .footer .container-row2 .row .col .content ul.ft-link.ft-link li {
+    color: #757575;
+  }
+  
+  .footer .container-row2 .row .col .content .social-share-inner .social-share {
+    display: flex;
+    justify-content: start;
+    padding: 0;
+  }
+  
+  .footer
+    .container-row2
+    .row
+    .col
+    .content
+    .social-share-inner
+    .social-share
+    li {
+    padding-right: 25px;
+    transition: all 0.5s;
+  }
+  
+  .footer
+    .container-row2
+    .row
+    .col
+    .content
+    .social-share-inner
+    .social-share
+    li
+    a
+    i {
+    color: rgba(198, 201, 216, 0.75);
+    transition: all 0.6s;
+  }
+  
+  .footer
+    .container-row2
+    .row
+    .col
+    .content
+    .social-share-inner
+    .social-share
+    li:hover {
+    transform: translateY(-5px);
+  }
+  
+  .footer
+    .container-row2
+    .row
+    .col
+    .content
+    .social-share-inner
+    .social-share
+    li:hover
+    a
+    i {
+    color: #ffffff;
+  }

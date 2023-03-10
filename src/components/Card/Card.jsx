@@ -43,7 +43,7 @@ const Card = ({ prod }) => {
           </div>
           <div className="row w-100" style={{ margin: 0 }}>
             <div
-              className="col-4"
+              className="col-6"
               style={{
                 overflow: "hidden",
                 padding: 0,
@@ -59,7 +59,7 @@ const Card = ({ prod }) => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "#bd0202",
+                  color: "#da231f",
                   fontWeight: "800",
                 }}
               >

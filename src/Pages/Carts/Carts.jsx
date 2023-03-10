@@ -1,17 +1,29 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getProductApi } from "../../redux/reducers/productReducer";
+import { changeQuantityMinusAction, changeQuantityPlusAction, deleteCartAction, getProductApi } from "../../redux/reducers/productReducer";
 import "../../assets/css/cart.css";
 import { NavLink } from "react-router-dom";
 
 const Carts = (props) => {
-  const { cartList } = useSelector((state) => state.productReducer);
+  const { cartList, totalPrice } = useSelector((state) => state.productReducer);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    const actionAsyne = getProductApi();
-    dispatch(actionAsyne);
-  }, []);
+  // useEffect(() => {
+  //   const actionAsyne = getProductApi();
+  //   dispatch(actionAsyne);
+  // }, []);
+  const deleteItem = (shoeClick) => {
+    console.log('shoeClick: ', shoeClick)
+    dispatch(deleteCartAction(shoeClick));
+    console.log('cartList: ', cartList)
+  };
+  const changeQuantityMinus = (item) => {
+    dispatch(changeQuantityMinusAction(item));
+  }
+  const changeQuantityPlus = (item) => {
+    dispatch(changeQuantityPlusAction(item));
+  }
+  console.log('cartList: ', cartList)
 
   return (
     <div className="container-fluid" style={{ padding: 0, margin: 0 }}>
@@ -32,10 +44,10 @@ const Carts = (props) => {
                 Name
               </td>
               <td className="fs-3 text-center" style={{ fontWeight: 600 }}>
-                Price
+                Quantity
               </td>
               <td className="fs-3 text-center" style={{ fontWeight: 600 }}>
-                Quantity
+                Price
               </td>
               <td className="fs-3 text-center" style={{ fontWeight: 600 }}>
                 Action
@@ -47,7 +59,7 @@ const Carts = (props) => {
               return (
                 <tr className="shoe" key={index}>
                   <td>
-                    <NavLink to={`/detail/${item.id}`} style={{overflow: 'hidden', textDecoration: 'none'}}>
+                    <NavLink to={`/detail/${item.id}`} style={{ overflow: 'hidden', textDecoration: 'none' }}>
                       <img src={item.image} alt="..." width={100} />
                     </NavLink>
                   </td>
@@ -57,17 +69,47 @@ const Carts = (props) => {
                   >
                     {item.name}
                   </td>
-                  <td
-                    className="fs-4 text-center"
-                    style={{ verticalAlign: "middle" }}
-                  >
-                    {item.price}
+                  <td style={{ verticalAlign: "middle", }}>
+                    <div className="fs-4 text-center h-100"
+                      style={{
+                        display: "flex",
+                        gap: 20,
+                        alignItems: "center",
+                        justifyContent: "center"
+                      }}>
+                      <div
+                        className="btn-minus rounded fs-4"
+                        style={{
+                          background: "#000",
+                          padding: "10px 20px",
+                          color: "#ffffff",
+                          fontWeight: 600
+                        }}
+                        onClick={() => { changeQuantityMinus(item) }}
+                      >
+                        -
+                      </div>
+                      {item?.number}
+                      <div
+                        className="btn-plus rounded fs-4"
+                        style={{
+                          background: "#000",
+                          padding: "10px 20px",
+                          color: "#ffffff",
+                          fontWeight: 600
+                        }}
+                        onClick={() => { changeQuantityPlus(item) }}
+                      >
+                        +
+                      </div>
+                    </div>
+
                   </td>
                   <td
                     className="fs-4 text-center"
                     style={{ verticalAlign: "middle" }}
                   >
-                    {item.quantity}
+                    {item.price}
                   </td>
                   <td style={{ verticalAlign: "middle" }}>
                     <div
@@ -96,6 +138,7 @@ const Carts = (props) => {
                           color: "#ffffff",
                           padding: "8px 12px",
                         }}
+                        onClick={() => { deleteItem(item) }}
                       >
                         <i class="fa fa-trash-alt"></i>
                       </div>
@@ -104,8 +147,19 @@ const Carts = (props) => {
                 </tr>
               );
             })}
+
           </tbody>
         </table>
+
+        <div className="total-price" style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <div className="text-center fs-2" style={{ fontWeight: 600 }}>Total price:  </div>
+          <div className="fs-2" style={{ fontWeight: 600, color: '#da231f' }}>   {totalPrice}
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'end' }}>
+          <button className="btn submit-order fs-3">SUBMIT ORDER</button>
+        </div>
       </div>
     </div>
   );

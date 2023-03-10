@@ -17,9 +17,11 @@ const Detail = () => {
   return (
     <>
       <div className="container pt-5">
-        <div className="row round" style={{ justifyContent: 'space-around', border: "3px solid #000",}}>
-          <div className="image col-12 col-sm-12 col-md-12 col-lg-6" style={{display: 
-        'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <div className="row row-detail round" style={{ justifyContent: 'space-around'}}>
+          <div className="image col-12 col-sm-12 col-md-12 col-lg-6" style={{
+            display:
+              'flex', justifyContent: 'center', alignItems: 'center'
+          }}>
             <img
               src={productDetail?.image}
               alt="..."
@@ -42,10 +44,10 @@ const Detail = () => {
               {productDetail?.name}
             </h3>
             <p className="description">{productDetail?.description}</p>
-            <h4 className="fs-3 mt-4 text-success" style={{color: '#000', fontWeight: 600}}>
+            <h4 className="fs-3 mt-4 text-success" style={{ color: '#000', fontWeight: 600 }}>
               Available size
             </h4>
-            <div className="list-size" style={{display: 'flex' , justifyContent: 'center',gap: 15}}>
+            <div className="list-size" style={{ display: 'flex', justifyContent: 'center', gap: 15 }}>
               {productDetail?.size?.map((item, index) => {
                 return (
                   <div
@@ -66,9 +68,9 @@ const Detail = () => {
             </div>
             <div
               className="price-product fs-1 mt-4"
-              style={{color: '#bd0202', fontWeight: 600 }}
+              style={{ color: '#da231f', fontWeight: 600 }}
             >
-              <span style={{color: '#bd0202'}}>Price: </span>${productDetail?.price}
+              <span style={{ color: '#da231f' }}>Price: </span>${productDetail?.price}
             </div>
             <div
               className="quantity"
@@ -89,7 +91,7 @@ const Detail = () => {
               >
                 {"  "}-{"  "}
               </div>
-              <span className="number text-white" style={{fontSize: 40, fontWeight: 600}}>
+              <span className="number" style={{ fontSize: 40, fontWeight: 600 }}>
                 {productDetail?.quantity}
               </span>
               <div
@@ -104,7 +106,7 @@ const Detail = () => {
                 +
               </div>
             </div>
-            <button className="btn add-to-cart text-dark text-center  w-100 mt-4 p-2 fs-2">
+            <button className="btn add-to-cart text-center  w-100 mt-4 p-2 fs-2">
               Add to cart
             </button>
           </div>
@@ -112,8 +114,8 @@ const Detail = () => {
       </div>
 
       <div className="container mt-5">
-        <h2 className="title text-center text-dark pt-5" style={{fontSize: 50}}>Related Products</h2>
-        <div className="list w-100 row" style={{justifyContent: 'space-around'}}>
+        <h2 className="title text-center text-dark pt-5" style={{ fontSize: 50 }}>Related Products</h2>
+        <div className="list w-100 row" style={{ justifyContent: 'space-around' }}>
           {productDetail?.relatedProducts?.map((item, index) => {
             return <Card key={index} prod={item} />;
           })}
